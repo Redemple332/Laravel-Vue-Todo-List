@@ -79,7 +79,7 @@ class ItemController extends Controller
 
         if($item){
             $item->update([ 
-                'completed' => $item->completed ? true : false,
+                'completed' => $item->completed ? false : true,
                 'completed_at' => $item->completed ? Carbon::now() : null
             ]);
             return $item;
